@@ -102,6 +102,221 @@
   line-height: 1.5;
 }
 
+/* Dummy / target UI previews */
+.dummy-ui {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+}
+
+.dummy-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-bottom: 0.75rem;
+}
+
+/* 1: Profile card */
+.dummy-ui-1 .dummy-card {
+  max-width: 220px;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin: 0;
+  background: #fff;
+}
+
+.dummy-ui-1 .dummy-card h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.dummy-ui-1 .dummy-role {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.dummy-ui-1 .dummy-bio {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+/* 2: Inline & block */
+.dummy-ui-2 p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.dummy-ui-2 .dummy-highlight {
+  background: #fef3c7;
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.dummy-ui-2 .dummy-quote {
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-left: 3px solid #2563eb;
+  background: #eff6ff;
+  color: #1e40af;
+  font-size: 0.9rem;
+}
+
+/* 3: Button row */
+.dummy-ui-3 .dummy-btn-row {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dummy-ui-3 .dummy-btn {
+  padding: 0.4rem 0.75rem;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+/* 4: Feature grid */
+.dummy-ui-4 .dummy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  max-width: 320px;
+}
+
+.dummy-ui-4 .dummy-grid-cell {
+  padding: 0.6rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 0.8rem;
+}
+
+.dummy-ui-4 .dummy-grid-cell strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+/* 5: Page layout */
+.dummy-ui-5 .dummy-page {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 280px;
+}
+
+.dummy-ui-5 .dummy-page-header {
+  padding: 0.5rem 1rem;
+  background: #1e293b;
+  color: #fff;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.dummy-ui-5 .dummy-page-main {
+  padding: 0.75rem 1rem;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.dummy-ui-5 .dummy-page-main h4 {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+}
+
+/* 6: Selector drill result */
+.dummy-ui-6 .post {
+  font-size: 0.85rem;
+  max-width: 260px;
+}
+
+.dummy-ui-6 .post h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.dummy-ui-6 .post h2 + p {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.dummy-ui-6 .post a[href] {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.dummy-ui-6 .post a:not([href]) {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.dummy-ui-6 .post div p {
+  background: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin: 0.25rem 0 0;
+}
+
+/* 7: Named grid layout */
+.dummy-ui-7 .dummy-dashboard {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas:
+    "header header"
+    "side   main"
+    "footer footer";
+  gap: 2px;
+  min-height: 120px;
+  max-width: 260px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dummy-ui-7 .dummy-dash-header {
+  grid-area: header;
+  background: #6366f1;
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.dummy-ui-7 .dummy-dash-side {
+  grid-area: side;
+  background: #e0e7ff;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.dummy-ui-7 .dummy-dash-main {
+  grid-area: main;
+  background: #f8fafc;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
+.dummy-ui-7 .dummy-dash-footer {
+  grid-area: footer;
+  background: #cbd5e1;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.75rem;
+  margin: 0;
+}
+
 .challenge-concepts {
   font-size: 0.9rem;
   margin-bottom: 1rem;
