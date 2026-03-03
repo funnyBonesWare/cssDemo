@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Challenges – Build from scratch</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/challenges.css">
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to index</a>
+  <header class="challenges-header">
+    <h1>CSS Challenges</h1>
+    <p>Build these from scratch using only HTML and CSS. Use the <a href="index.html">concept demos</a> as reference. No frameworks, no copy-paste—write every line yourself.</p>
+  </header>
+
+  <section class="challenge-intro">
+    <h2>How it works</h2>
+    <ul>
+      <li>Pick a challenge and create a new <code>index.html</code> + <code>styles.css</code> in a folder (or your own repo).</li>
+      <li>Use only the concepts covered on this site: selectors, specificity, box model, display, flexbox, grid.</li>
+      <li>Check the “Concepts” and “Acceptance criteria” before you start.</li>
+      <li>Time estimates are rough; take more if you need. Stretch goals are optional.</li>
+    </ul>
+  </section>
+
+  <div class="challenges-list">
+
+    <!-- Challenge 1 -->
+    <article class="challenge-card" id="challenge-1">
+      <div class="challenge-meta">
+        <span class="challenge-num">Challenge 1</span>
+        <span class="difficulty difficulty-beginner">Beginner</span>
+        <span class="time">~15 min</span>
+      </div>
+      <h3>Profile card</h3>
+      <p class="challenge-desc">Build a single card that shows a name, a short title, and one line of bio. It should look like a small “profile” or “team member” card.</p>
+      <div class="challenge-concepts">
+        <strong>Concepts:</strong> <a href="selectors.html">Selectors</a> (element, class), <a href="box-model.html">Box model</a> (padding, border, margin)
+      </div>
+      <div class="challenge-task">
+        <strong>Task:</strong>
+        <ul>
+          <li>One <code>div</code> or <code>article</code> with class e.g. <code>card</code>.</li>
+          <li>Inside: name (e.g. heading), role/title, one sentence bio.</li>
+          <li>Style the card with padding, a border, and margin so it doesn’t touch the viewport edges. Give it a max-width (e.g. 320px).</li>
+        </ul>
+      </div>
+      <div class="challenge-criteria">
+        <strong>Acceptance criteria:</strong> Card has visible padding and border; content doesn’t touch the card edges; there’s space around the card (margin).
+      </div>
+      <p class="stretch">Stretch: Add a second card and use a class so both share the same styles.</p>
+    </article>
+
+    <!-- Challenge 2 -->
+    <article class="challenge-card" id="challenge-2">
+      <div class="challenge-meta">
+        <span class="challenge-num">Challenge 2</span>
+        <span class="difficulty difficulty-beginner">Beginner</span>
+        <span class="time">~10 min</span>
+      </div>
+      <h3>Inline & block text</h3>
+      <p class="challenge-desc">A short “article” where some words are highlighted inline and some blocks (e.g. a quote) are clearly separate.</p>
+      <div class="challenge-concepts">
+        <strong>Concepts:</strong> <a href="display.html">Display</a> (block, inline), <a href="selectors.html">Selectors</a>
+      </div>
+      <div class="challenge-task">
+        <strong>Task:</strong>
+        <ul>
+          <li>One or two paragraphs. Inside a paragraph, wrap a few words in <code>span</code> and style them (e.g. background, padding) so they stay inline.</li>
+          <li>Add a block-level “quote” (e.g. <code>blockquote</code> or a <code>div</code>) that appears on its own line with different styling (e.g. border-left, padding).</li>
+        </ul>
+      </div>
+      <div class="challenge-criteria">
+        <strong>Acceptance criteria:</strong> Highlighted words sit in the line of text; the quote is on its own line and visually distinct.
+      </div>
+      <p class="stretch">Use a class for the quote and style it only with that class.</p>
+    </article>
+
+    <!-- Challenge 3 -->
+    <article class="challenge-card" id="challenge-3">
+      <div class="challenge-meta">
+        <span class="challenge-num">Challenge 3</span>
+        <span class="difficulty difficulty-beginner">Beginner</span>
+        <span class="time">~15 min</span>
+      </div>
+      <h3>Button row</h3>
+      <p class="challenge-desc">A horizontal row of 3–4 buttons (links styled as buttons) with even spacing.</p>
+      <div class="challenge-concepts">
+        <strong>Concepts:</strong> <a href="flexbox.html">Flexbox</a> (container, justify-content, gap), <a href="box-model.html">Box model</a>
+      </div>
+      <div class="challenge-task">
+        <strong>Task:</strong>
+        <ul>
+          <li>A wrapper <code>div</code> with <code>display: flex</code>. Inside, 3–4 <code>a</code> tags styled as buttons (padding, background, border-radius, no underline).</li>
+          <li>Use <code>gap</code> between items and <code>justify-content: center</code> (or space-between / space-evenly).</li>
+        </ul>
+      </div>
+      <div class="challenge-criteria">
+        <strong>Acceptance criteria:</strong> Buttons sit in one row; there’s visible gap between them; layout uses flexbox (no floats or inline-block hacks).
+      </div>
+      <p class="stretch">Add a hover state (e.g. different background or border) using a pseudo-class.</p>
+    </article>
+
+    <!-- Challenge 4 -->
+    <article class="challenge-card" id="challenge-4">
+      <div class="challenge-meta">
+        <span class="challenge-num">Challenge 4</span>
+        <span class="difficulty difficulty-intermediate">Intermediate</span>
+        <span class="time">~25 min</span>
+      </div>
+      <h3>Feature or pricing grid</h3>
+      <p class="challenge-desc">A 3-column grid (or 2×2) of “feature” or “pricing” cards. Each cell has a title and a short description.</p>
+      <div class="challenge-concepts">
+        <strong>Concepts:</strong> <a href="grid.html">Grid</a> (rows, columns, gap), <a href="box-model.html">Box model</a>, <a href="selectors.html">Selectors</a>
+      </div>
+      <div class="challenge-task">
+        <strong>Task:</strong>
+        <ul>
+          <li>One grid container. Use <code>grid-template-columns: repeat(3, 1fr)</code> (or 2 columns). Use <code>gap</code>.</li>
+          <li>At least 4 grid items. Each item is a small card (heading + 1–2 sentences). Style cards with padding and maybe a border.</li>
+        </ul>
+      </div>
+      <div class="challenge-criteria">
+        <strong>Acceptance criteria:</strong> Layout is built with CSS Grid; columns are equal width (1fr); cards have consistent spacing and don’t overlap.
+      </div>
+      <p class="stretch">On narrow viewports, make it 1 column using a media query (optional).</p>
+    </article>
+
+    <!-- Challenge 5 -->
+    <article class="challenge-card" id="challenge-5">
+      <div class="challenge-meta">
+        <span class="challenge-num">Challenge 5</span>
+        <span class="difficulty difficulty-intermediate">Intermediate</span>
+        <span class="time">~20 min</span>
+      </div>
+      <h3>Simple page layout</h3>
+      <p class="challenge-desc">A minimal page with a header (full width) and a main content area. Main content centered with a max-width.</p>
+      <div class="challenge-concepts">
+        <strong>Concepts:</strong> <a href="flexbox.html">Flexbox</a> or <a href="grid.html">Grid</a>, <a href="box-model.html">Box model</a>, <a href="display.html">Display</a>
+      </div>
+      <div class="challenge-task">
+        <strong>Task:</strong>
+        <ul>
+          <li>Header: site title or “My site”, full width, with padding and a background (or border-bottom).</li>
+          <li>Main: wrapper with <code>max-width</code> (e.g. 800px) and <code>margin: 0 auto</code> to center. Put a heading and a paragraph inside.</li>
+        </ul>
+      </div>
+      <div class="challenge-criteria">
+        <strong>Acceptance criteria:</strong> Header spans full width; main content is centered and doesn’t stretch too wide on large screens.
+      </div>
+      <p class="stretch">Add a footer full width at the bottom. Use flexbox on body (column) so footer sticks at bottom if content is short (optional).</p>
+    </article>
+
+    <!-- Challenge 6 -->
+    <article class="challenge-card" id="challenge-6">
+      <div class="challenge-meta">
+        <span class="challenge-num">Challenge 6</span>
+        <span class="difficulty difficulty-intermediate">Intermediate</span>
+        <span class="time">~20 min</span>
+      </div>
+      <h3>Selector drill (no HTML changes)</h3>
+      <p class="challenge-desc">You’re given HTML. Write only CSS to style specific elements. You may not add or change classes/IDs in the HTML.</p>
+      <div class="challenge-concepts">
+        <strong>Concepts:</strong> <a href="selectors.html">Selectors</a> (descendant, child <code>&gt;</code>, adjacent <code>+</code>, attribute <code>[href]</code>)
+      </div>
+      <div class="challenge-task">
+        <strong>Task:</strong> Use this HTML structure (copy it as-is):
+        <pre class="given-html"><code>&lt;div class="post"&gt;
+  &lt;h2&gt;Title&lt;/h2&gt;
+  &lt;p&gt;First paragraph.&lt;/p&gt;
+  &lt;p&gt;Second paragraph.&lt;/p&gt;
+  &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
+  &lt;a&gt;No href&lt;/a&gt;
+  &lt;div&gt;
+    &lt;p&gt;Nested paragraph.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <ul>
+          <li>Style only the first paragraph after <code>h2</code> (e.g. larger font or different color) using the adjacent sibling combinator.</li>
+          <li>Style only the nested paragraph (inside the inner <code>div</code>) differently—use a descendant selector, but make sure the direct <code>p</code> under <code>.post</code> are not affected the same way.</li>
+          <li>Style only the link that has an <code>href</code> (e.g. color, underline); leave the link without <code>href</code> unstyled or gray.</li>
+        </ul>
+      </div>
+      <div class="challenge-criteria">
+        <strong>Acceptance criteria:</strong> First paragraph after h2 looks different; nested paragraph has its own style; only the link with href is styled as a link.
+      </div>
+      <p class="stretch">Use the child combinator <code>.post &gt; p</code> to style direct paragraphs only, and a descendant selector for the nested one.</p>
+    </article>
+
+    <!-- Challenge 7 -->
+    <article class="challenge-card" id="challenge-7">
+      <div class="challenge-meta">
+        <span class="challenge-num">Challenge 7</span>
+        <span class="difficulty difficulty-intermediate">Intermediate</span>
+        <span class="time">~30 min</span>
+      </div>
+      <h3>Named grid layout</h3>
+      <p class="challenge-desc">A small dashboard-style layout using CSS Grid named areas: header, sidebar, main, footer.</p>
+      <div class="challenge-concepts">
+        <strong>Concepts:</strong> <a href="grid.html">Grid</a> (grid-template-areas, grid-area)
+      </div>
+      <div class="challenge-task">
+        <strong>Task:</strong>
+        <ul>
+          <li>One grid container with <code>grid-template-areas</code>. Define something like: <code>"header header"</code>, <code>"side main"</code>, <code>"footer footer"</code>. Two columns: narrow (sidebar) + flexible (main).</li>
+          <li>Four children: assign each <code>grid-area: header</code>, <code>side</code>, <code>main</code>, <code>footer</code>. Add placeholder text so each region is visible.</li>
+        </ul>
+      </div>
+      <div class="challenge-criteria">
+        <strong>Acceptance criteria:</strong> Layout uses <code>grid-template-areas</code> and <code>grid-area</code>; header and footer span full width; sidebar and main sit side by side.
+      </div>
+      <p class="stretch">Give the grid a min-height and make the main area grow (e.g. 1fr row) so the layout fills the viewport.</p>
+    </article>
+
+  </div>
+
+  <section class="challenge-outro">
+    <h2>Done?</h2>
+    <p>Compare with a teammate or share your solution in a code review. Refactor for clarity and reuse (classes, variables) if you have time.</p>
+  </section>
+</body>
+</html>

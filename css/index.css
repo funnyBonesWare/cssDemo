@@ -50,3 +50,27 @@
   color: #6b7280;
   line-height: 1.4;
 }
+
+.header-challenge-link {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header-challenge-link:hover {
+  text-decoration: underline;
+}
+
+.topic-card-challenge {
+  border-color: #a7f3d0;
+  background: linear-gradient(to bottom, #f0fdf4, #fff);
+}
+
+.topic-card-challenge:hover {
+  border-color: #059669;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.2);
+}
+
+.topic-card-challenge .topic-num {
+  background: #059669;
+}
