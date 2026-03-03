@@ -1,0 +1,234 @@
+/* Base styles shared across all demo pages */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  color: #1a1a1a;
+}
+
+header h1 {
+  margin-top: 0;
+}
+
+header p {
+  color: #4b5563;
+  font-size: 1.05rem;
+}
+
+.topic-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.topic-nav a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.topic-nav a:hover {
+  background: #1d4ed8;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Demo section with optional intro */
+.demo-section {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.demo-section h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #111827;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.section-desc {
+  color: #4b5563;
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+}
+
+/* Demo card: live preview + CSS code */
+.demo-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+@media (max-width: 700px) {
+  .demo-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.demo-preview {
+  padding: 1rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  min-height: 60px;
+}
+
+.demo-preview-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+}
+
+.code-panel {
+  position: relative;
+}
+
+.code-panel .code-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.code-block {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre;
+}
+
+.code-block .comment { color: #94a3b8; }
+.code-block .selector { color: #f472b6; }
+.code-block .property { color: #7dd3fc; }
+.code-block .value { color: #86efac; }
+.code-block .punctuation { color: #cbd5e1; }
+
+/* Interactive control strip */
+.control-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.control-strip label {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-right: 0.25rem;
+}
+
+.control-strip .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.control-strip button {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.85rem;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #475569;
+}
+
+.control-strip button:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+.control-strip button.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* Tip / info callout */
+.tip-box {
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+  color: #1e40af;
+}
+
+.tip-box strong { color: #1e3a8a; }
+
+/* Hover-highlight for selectors (JS adds .highlight-match) */
+[data-selector-hint]:hover {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+code {
+  background: #e5e7eb;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+}
+
+pre {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.8rem;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  line-height: 1.5;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.demo-section ul {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.demo-section li {
+  margin: 0.35rem 0;
+}

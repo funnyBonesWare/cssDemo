@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Box Model</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/box-model.css">
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to index</a>
+  <header>
+    <h1>CSS Box Model</h1>
+    <p>Every element is a box. From inside out: <strong>content</strong> → <strong>padding</strong> → <strong>border</strong> → <strong>margin</strong>. Padding is inside the element (background applies); margin is outside (space between elements).</p>
+  </header>
+
+  <section class="demo-section">
+    <h3>Visual breakdown</h3>
+    <p class="section-desc">The outer dashed border shows the element’s margin area; the yellow band is padding; the blue rectangle is the content.</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div class="box-demo">
+          <div class="box-content">Content</div>
+        </div>
+        <p class="box-legend">
+          <span class="legend-content">Content</span>
+          <span class="legend-padding">Padding</span>
+          <span class="legend-border">Border</span>
+          <span class="legend-margin">Margin</span>
+        </p>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.box-demo {
+  margin: 2rem 0;        /* outside */
+  border: 4px dashed #f59e0b;
+  padding: 24px;          /* inside */
+  background: #fef3c7;   /* padding area */
+}
+
+.box-content {
+  background: #1e3a8a;   /* content area */
+  color: white;
+  padding: 1rem;
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3>Properties</h3>
+    <ul>
+      <li><code>width</code> / <code>height</code> – by default, the size of the <strong>content</strong> area only.</li>
+      <li><code>padding</code> – space between content and border; background and border-radius apply here.</li>
+      <li><code>border</code> – line around the padding.</li>
+      <li><code>margin</code> – space outside the border; not part of the element’s background.</li>
+    </ul>
+    <div class="tip-box">
+      <strong><code>box-sizing: border-box</code></strong> makes <code>width</code> and <code>height</code> include padding and border, so the total size is easier to reason about. Many projects set it globally with <code>* { box-sizing: border-box; }</code>.
+    </div>
+    <div class="code-panel" style="margin-top: 1rem;">
+      <span class="code-label">CSS</span>
+      <pre class="code-block"><code>* {
+  box-sizing: border-box;
+}
+
+.box-a {
+  width: 200px;
+  padding: 24px;   /* more padding = bigger content area */
+  margin: 10px;
+  border: 2px solid #2563eb;
+}</code></pre>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3>Padding vs margin</h3>
+    <p class="section-desc">Box A has more <code>padding</code> (inner space); Box B has more <code>margin</code> (outer space).</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div class="box-a">Box A: more padding</div>
+        <div class="box-b">Box B: more margin</div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.box-a {
+  width: 200px;
+  padding: 24px;
+  margin: 10px;
+  border: 2px solid #2563eb;
+  background: #dbeafe;
+}
+
+.box-b {
+  width: 200px;
+  padding: 10px;
+  margin: 24px;
+  border: 2px solid #059669;
+  background: #d1fae5;
+}</code></pre>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

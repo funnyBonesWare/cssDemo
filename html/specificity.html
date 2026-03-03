@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Specificity</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/specificity.css">
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to index</a>
+  <header>
+    <h1>CSS Specificity</h1>
+    <p>When two or more rules apply to the same element and set the same property, the one with <strong>higher specificity</strong> wins. Order: <strong>inline</strong> &gt; <strong>ID</strong> &gt; <strong>class</strong> &gt; <strong>element</strong>.</p>
+  </header>
+
+  <section class="demo-section">
+    <h3>Element vs class vs ID</h3>
+    <p class="section-desc">Same property (<code>background</code>) set by different selectors. The more specific rule wins.</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <p>Styled by <code>p</code> (element) – lowest.</p>
+        <p class="by-class">Styled by <code>.by-class</code> – overrides element.</p>
+        <p class="by-class" id="by-id">Styled by <code>#by-id</code> – overrides class.</p>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS (order in file doesn’t matter; specificity does)</span>
+        <pre class="code-block"><code>/* Element – specificity 1 */
+p {
+  background: #e5e7eb;
+  padding: 0.5rem;
+}
+
+/* Class – specificity 10 */
+.by-class {
+  background: #bfdbfe;
+  color: #1e40af;
+}
+
+/* ID – specificity 100 */
+#by-id {
+  background: #a7f3d0;
+  color: #065f46;
+  border: 2px solid #059669;
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3>Inline style (highest)</h3>
+    <p class="section-desc">Styles in the <code>style</code> attribute beat ID, class, and element selectors (unless the rule uses <code>!important</code>).</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <p style="background: #fecaca; padding: 0.5rem;">
+          This has <code>style="background: #fecaca; ..."</code> – inline wins.
+        </p>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">HTML (inline style)</span>
+        <pre class="code-block"><code>&lt;p style="background: #fecaca; padding: 0.5rem;"&gt;
+  This has inline style – inline wins.
+&lt;/p&gt;</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3>Specificity “score” (concept)</h3>
+    <p class="section-desc">Think of specificity as a score. When both rules apply, the higher score wins.</p>
+    <ul>
+      <li><strong>Inline style:</strong> 1000</li>
+      <li><strong>ID:</strong> 100 (per ID)</li>
+      <li><strong>Class / attribute / pseudo-class (e.g. <code>:hover</code>):</strong> 10 each</li>
+      <li><strong>Element / pseudo-element (e.g. <code>::before</code>):</strong> 1 each</li>
+    </ul>
+    <div class="tip-box">
+      <strong>Tip:</strong> When two rules target the same property on the same element, the one with higher specificity wins. If they’re equal, the one that appears <em>later</em> in the CSS wins.
+    </div>
+    <div class="code-panel" style="margin-top: 1rem;">
+      <span class="code-label">Example</span>
+      <pre class="code-block"><code>/* 1 element  = 1 */
+p { color: blue; }
+
+/* 1 class    = 10 */
+.foo { color: red; }
+
+/* 1 class + 1 element = 11 */
+p.foo { color: green; }
+
+/* 1 ID      = 100 */
+#bar { color: purple; }</code></pre>
+    </div>
+  </section>
+</body>
+</html>

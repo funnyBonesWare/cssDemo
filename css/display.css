@@ -1,0 +1,70 @@
+/* ============================================
+   DISPLAY
+   block, inline, flex, grid
+   ============================================ */
+
+/* Block: takes full width, stacks vertically (default for div, p, etc.) */
+.block-demo {
+  border: 2px solid #94a3b8;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.block-item {
+  display: block;
+  background: #cbd5e1;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+}
+
+/* Inline: sits in the line of text, width = content */
+.inline-demo {
+  margin: 0;
+}
+
+.inline-item {
+  display: inline;
+  background: #a5b4fc;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin: 0 0.15rem;
+}
+
+/* Flex: one-dimensional layout (row or column) */
+.flex-demo {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #e0e7ff;
+  border-radius: 6px;
+}
+
+.flex-item {
+  flex: 1;
+  background: #6366f1;
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Grid: two-dimensional rows and columns */
+.grid-demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #d1fae5;
+  border-radius: 6px;
+  max-width: 240px;
+}
+
+.grid-item {
+  background: #059669;
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 4px;
+}

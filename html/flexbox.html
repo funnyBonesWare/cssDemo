@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/flexbox.css">
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to index</a>
+  <header>
+    <h1>CSS Flexbox</h1>
+    <p>The parent is the <strong>flex container</strong> (<code>display: flex</code>); direct children are <strong>flex items</strong>. Use <code>justify-content</code> for the main axis and <code>align-items</code> for the cross axis.</p>
+  </header>
+
+  <section class="demo-section">
+    <h3>Container: <code>display: flex</code></h3>
+    <p class="section-desc">The flex container lays out its children in a row by default. Items can grow, shrink, and align along the main axis (row) and cross axis (column).</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div class="flex-container">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.flex-container {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #e0e7ff;
+  border-radius: 8px;
+}
+
+.flex-item {
+  background: #6366f1;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  min-width: 48px;
+  text-align: center;
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3><code>justify-content</code> – main axis alignment</h3>
+    <p class="section-desc">Controls how items are distributed along the main axis (horizontal when <code>flex-direction</code> is <code>row</code>). Try the buttons below.</p>
+    <div class="control-strip">
+      <label>Try it:</label>
+      <div class="btn-group">
+        <button type="button" data-justify="flex-start" class="active">flex-start</button>
+        <button type="button" data-justify="center">center</button>
+        <button type="button" data-justify="flex-end">flex-end</button>
+        <button type="button" data-justify="space-between">space-between</button>
+        <button type="button" data-justify="space-around">space-around</button>
+        <button type="button" data-justify="space-evenly">space-evenly</button>
+      </div>
+    </div>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div id="flex-justify-demo" class="flex-container justify-start">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.flex-container {
+  display: flex;
+  justify-content: flex-start; /* or center | flex-end
+    | space-between | space-around | space-evenly */
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #e0e7ff;
+  border-radius: 8px;
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3><code>align-items</code> – cross axis alignment</h3>
+    <p class="section-desc">Controls how items align along the cross axis (vertical when in a row). Options: <code>stretch</code> (default), <code>flex-start</code>, <code>center</code>, <code>flex-end</code>, <code>baseline</code>.</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo (align-items: center)</span>
+        <div class="flex-container align-center tall">
+          <div class="flex-item">1</div>
+          <div class="flex-item flex-item-tall">2 tall</div>
+          <div class="flex-item">3</div>
+        </div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.flex-container {
+  display: flex;
+  align-items: center; /* stretch | flex-start
+    | center | flex-end | baseline */
+  min-height: 100px;
+}
+
+.flex-item-tall {
+  padding: 1.5rem 1rem; /* one item taller */
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/interactive.js"></script>
+</body>
+</html>

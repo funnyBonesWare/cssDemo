@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/grid.css">
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to index</a>
+  <header>
+    <h1>CSS Grid</h1>
+    <p>Grid is a two-dimensional layout: define <strong>rows</strong> and <strong>columns</strong>, and optionally <strong>areas</strong>. The parent is the grid container; direct children are grid items.</p>
+  </header>
+
+  <section class="demo-section">
+    <h3>Rows and columns – <code>grid-template-rows</code> / <code>grid-template-columns</code></h3>
+    <p class="section-desc">Define the track sizes. <code>1fr</code> = one fraction of available space. Use <code>repeat(n, 1fr)</code> for equal columns.</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div class="grid-basic">
+          <div class="grid-cell">1</div>
+          <div class="grid-cell">2</div>
+          <div class="grid-cell">3</div>
+          <div class="grid-cell">4</div>
+          <div class="grid-cell">5</div>
+          <div class="grid-cell">6</div>
+        </div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.grid-basic {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #d1fae5;
+  border-radius: 8px;
+}
+
+.grid-cell {
+  background: #059669;
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 6px;
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3>Interactive: change column count</h3>
+    <p class="section-desc">Same grid, different <code>grid-template-columns</code>. Click to see how the layout changes.</p>
+    <div class="control-strip">
+      <label>Columns:</label>
+      <div class="btn-group">
+        <button type="button" data-cols="2">2</button>
+        <button type="button" data-cols="3" class="active">3</button>
+        <button type="button" data-cols="4">4</button>
+        <button type="button" data-cols="5">5</button>
+      </div>
+    </div>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div id="grid-cols-demo" class="grid-fr">
+          <div class="grid-cell">A</div>
+          <div class="grid-cell">B</div>
+          <div class="grid-cell">C</div>
+          <div class="grid-cell">D</div>
+          <div class="grid-cell">E</div>
+          <div class="grid-cell">F</div>
+        </div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.grid-fr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #e0e7ff;
+  border-radius: 8px;
+}
+
+/* Try: repeat(2, 1fr), repeat(4, 1fr), etc. */</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3>Named areas – <code>grid-template-areas</code></h3>
+    <p class="section-desc">Give names to regions in the grid, then assign items to those areas with <code>grid-area</code>. Great for page layouts (header, sidebar, main, footer).</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div class="grid-areas">
+          <header class="area-header">Header</header>
+          <aside class="area-side">Sidebar</aside>
+          <main class="area-main">Main</main>
+          <footer class="area-footer">Footer</footer>
+        </div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.grid-areas {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 120px 1fr;
+  grid-template-areas:
+    "header header"
+    "side   main"
+    "footer footer";
+  gap: 0.5rem;
+  min-height: 180px;
+}
+
+.area-header { grid-area: header; }
+.area-side   { grid-area: side; }
+.area-main   { grid-area: main; }
+.area-footer { grid-area: footer; }</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3><code>fr</code> units and <code>repeat()</code></h3>
+    <p class="section-desc"><code>1fr</code> = one fraction of free space. <code>repeat(3, 1fr)</code> is shorthand for <code>1fr 1fr 1fr</code>.</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div class="grid-fr grid-fr-static">
+          <div class="grid-cell">A</div>
+          <div class="grid-cell">B</div>
+          <div class="grid-cell">C</div>
+        </div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>grid-template-columns: repeat(3, 1fr);
+/* Same as: 1fr 1fr 1fr – three equal columns */</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <script src="../js/interactive.js"></script>
+</body>
+</html>

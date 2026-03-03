@@ -1,0 +1,90 @@
+/* ============================================
+   GRID
+   rows, columns, areas
+   ============================================ */
+
+/* Basic grid: 2 rows × 3 columns */
+.grid-basic {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #d1fae5;
+  border-radius: 8px;
+  max-width: 320px;
+}
+
+.grid-cell {
+  background: #059669;
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Named areas – layout by area names */
+.grid-areas {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 120px 1fr;
+  grid-template-areas:
+    "header header"
+    "side   main"
+    "footer footer";
+  gap: 0.5rem;
+  min-height: 180px;
+  padding: 0.5rem;
+  background: #fef3c7;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.area-header {
+  grid-area: header;
+  background: #f59e0b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.area-side {
+  grid-area: side;
+  background: #fcd34d;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.area-main {
+  grid-area: main;
+  background: #fde68a;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+.area-footer {
+  grid-area: footer;
+  background: #f59e0b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+/* fr and repeat */
+.grid-fr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #e0e7ff;
+  border-radius: 8px;
+  max-width: 280px;
+}
+
+.grid-fr .grid-cell {
+  background: #6366f1;
+}
+
+.grid-fr-static {
+  max-width: 280px;
+}

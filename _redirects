@@ -1,0 +1,2 @@
+# Redirect root to the main index (Netlify)
+/    /html/index.html   200

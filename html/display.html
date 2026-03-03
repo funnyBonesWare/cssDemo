@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Display</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/display.css">
+</head>
+<body>
+  <a href="index.html" class="back-link">← Back to index</a>
+  <header>
+    <h1>CSS Display</h1>
+    <p>The <code>display</code> property controls how an element is laid out: <code>block</code> (stacked, full width), <code>inline</code> (flows with text), <code>flex</code>, and <code>grid</code> (layout containers).</p>
+  </header>
+
+  <section class="demo-section">
+    <h3>Block – full width, stacked vertically</h3>
+    <p class="section-desc">Block elements start on a new line and take the full width of their parent. Default for <code>div</code>, <code>p</code>, <code>section</code>, etc.</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div class="block-demo">
+          <div class="block-item">Block 1</div>
+          <div class="block-item">Block 2</div>
+          <div class="block-item">Block 3</div>
+        </div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.block-item {
+  display: block;
+  background: #cbd5e1;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3>Inline – flows with text</h3>
+    <p class="section-desc">Inline elements stay in the line of text; width and height don’t apply the same way. Default for <code>span</code>, <code>a</code>, <code>strong</code>.</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <p class="inline-demo">
+          Here is <span class="inline-item">inline 1</span> and
+          <span class="inline-item">inline 2</span> and
+          <span class="inline-item">inline 3</span> in a sentence.
+        </p>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.inline-item {
+  display: inline;
+  background: #a5b4fc;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin: 0 0.15rem;
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3>Flex – one-dimensional layout</h3>
+    <p class="section-desc">The parent becomes a flex container; children become flex items arranged in a row or column. See the <a href="flexbox.html">Flexbox</a> page for more.</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div class="flex-demo">
+          <div class="flex-item">1</div>
+          <div class="flex-item">2</div>
+          <div class="flex-item">3</div>
+        </div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.flex-demo {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #e0e7ff;
+  border-radius: 6px;
+}
+
+.flex-item {
+  flex: 1;
+  background: #6366f1;
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 4px;
+}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h3>Grid – two-dimensional layout</h3>
+    <p class="section-desc">The parent becomes a grid container; you define rows and columns. See the <a href="grid.html">Grid</a> page for more.</p>
+    <div class="demo-card">
+      <div class="demo-preview">
+        <span class="demo-preview-label">Live demo</span>
+        <div class="grid-demo">
+          <div class="grid-item">A</div>
+          <div class="grid-item">B</div>
+          <div class="grid-item">C</div>
+          <div class="grid-item">D</div>
+        </div>
+      </div>
+      <div class="code-panel">
+        <span class="code-label">CSS</span>
+        <pre class="code-block"><code>.grid-demo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: #d1fae5;
+  border-radius: 6px;
+}
+
+.grid-item {
+  background: #059669;
+  color: white;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 4px;
+}</code></pre>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

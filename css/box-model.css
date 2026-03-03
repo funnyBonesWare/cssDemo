@@ -1,0 +1,85 @@
+/* ============================================
+   BOX MODEL
+   content, padding, border, margin
+   ============================================ */
+
+/* Visual demo: content + padding + border + margin */
+.box-demo {
+  margin: 2rem 0; /* outer margin */
+  border: 4px dashed #f59e0b; /* border */
+  padding: 24px; /* padding */
+  background: #fef3c7; /* padding area color */
+  max-width: 280px;
+}
+
+.box-content {
+  background: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.box-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.legend-content {
+  padding: 0.25rem 0.5rem;
+  background: #1e3a8a;
+  color: white;
+  border-radius: 4px;
+}
+
+.legend-padding {
+  padding: 0.25rem 0.5rem;
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 4px;
+}
+
+.legend-border {
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  border: 2px solid #f59e0b;
+  border-radius: 4px;
+}
+
+.legend-margin {
+  padding: 0.25rem 0.5rem;
+  background: #e5e7eb;
+  border: 1px dashed #9ca3af;
+  border-radius: 4px;
+}
+
+/* Two boxes: different padding vs margin */
+.box-a {
+  width: 200px;
+  padding: 24px;
+  margin: 10px;
+  border: 2px solid #2563eb;
+  background: #dbeafe;
+  border-radius: 6px;
+}
+
+.box-b {
+  width: 200px;
+  padding: 10px;
+  margin: 24px;
+  border: 2px solid #059669;
+  background: #d1fae5;
+  border-radius: 6px;
+}
+
+.demo-section ul {
+  padding-left: 1.5rem;
+}
+
+.demo-section li {
+  margin: 0.5rem 0;
+}

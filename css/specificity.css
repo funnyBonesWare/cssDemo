@@ -1,0 +1,48 @@
+/* ============================================
+   SPECIFICITY
+   inline > ID > class > element
+   ============================================ */
+
+/* Element – specificity 1 (lowest of these) */
+p {
+  background: #e5e7eb;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+/* Class – specificity 10 (beats element) */
+.by-class {
+  background: #bfdbfe;
+  color: #1e40af;
+}
+
+/* ID – specificity 100 (beats class and element) */
+#by-id {
+  background: #a7f3d0;
+  color: #065f46;
+  border: 2px solid #059669;
+}
+
+/* Inline styles in HTML have higher specificity than ID;
+   we don't override the inline example here to show that. */
+
+.specificity-note {
+  background: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+
+.specificity-note code {
+  background: #fde68a;
+}
+
+.demo-section ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.demo-section li {
+  margin: 0.25rem 0;
+}

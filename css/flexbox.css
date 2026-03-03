@@ -1,0 +1,53 @@
+/* ============================================
+   FLEXBOX
+   container, items, justify-content, align-items
+   ============================================ */
+
+/* Flex container – direct children become flex items */
+.flex-container {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #e0e7ff;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+.flex-item {
+  background: #6366f1;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  min-width: 48px;
+  text-align: center;
+}
+
+/* justify-content: main axis alignment */
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* align-items: cross axis alignment */
+.align-center {
+  align-items: center;
+}
+
+.tall {
+  min-height: 100px;
+}
+
+.flex-item-tall {
+  padding: 1.5rem 1rem;
+}
